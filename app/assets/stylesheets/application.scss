@@ -11,3 +11,11 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  background-image: asset-url('laptop.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: auto;
+  overflow: hidden;
+}
