@@ -1,42 +1,42 @@
 /*General settings */
-
 body {
-  background-image:url(images/bg_laptop.png);
+  background-image: asset-url('bg_laptop.png');
   background-size: cover;
+}
+
+.show-container {
+  width: 500px;
+  margin: 0 auto; 
   font-family: 'Syne', sans-serif;
   color: #03506f;
   font-size: 15px;
   line-height: 2px;
-}
 
-.container {
-  width: 500px; 
-  margin: 0 auto; 
-}
-
-p{
-  color: #03506f;
-  padding: auto;
-  margin: auto;
-}
-
-h1{
+  h1{
     color: #0a043c;
     font-family: 'Ubuntu', sans-serif;
     font-size: 20px;
     line-height:2px;
     padding: auto;
     margin: auto;
-}
 
-h2 {
+  p {
+    color: #03506f;
+    padding: auto;
+    margin: auto;
+
+  h2 {
    color: #a3ddcb;
     font-family: 'Ubuntu', sans-serif;
     font-size: 18px;
     line-height: 2px;
     padding: auto;
     margin: auto;
+  }
+  }
+  }
 }
+
 
 
 .text-center {
@@ -53,7 +53,7 @@ h2 {
   text-align: center;
 }
 
-button {
+.btn-action {
   background-color: #ffe3de;
   color: #03506f;
   padding: 15px 20px;
@@ -63,10 +63,10 @@ button {
   font-family: 'Syne', sans-serif;
   text-align: center;
   width: auto;
-  margin: 10px 15px;
+  margin: 50px 150px;
 }
 
-button:hover {
+.btn-action:hover {
   text-decoration: none;
   background-color: grey;
   color: white;
