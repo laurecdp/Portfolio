@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= meta_title %></title>
+    <title> <%= meta_title %> </title>
     <meta name="description" content="<%= meta_description %>">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <!-- Facebook Open Graph data -->
     <meta property="og:title" content="<%= meta_title %>" />
@@ -12,16 +13,15 @@
     <meta property="og:description" content="<%= meta_description %>" />
     <meta property="og:site_name" content="<%= meta_title %>" />
 
-    <title>Portfolio - Laure CdP : Coding underway</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Portfolio - Laure CdP : Coding underway</title> %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
     <%= favicon_link_tag %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    
   </head>
 
   <body>
