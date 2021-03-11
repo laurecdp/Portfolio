@@ -1,0 +1,112 @@
+/*General settings */
+
+body {
+  background-image:url(images/bg_laptop.png);
+  background-size: cover;
+  font-family: 'Syne', sans-serif;
+  color: #03506f;
+  font-size: 15px;
+  line-height: 2px;
+}
+
+.container {
+  width: 500px; 
+  margin: 0 auto; 
+}
+
+p{
+  color: #03506f;
+  padding: auto;
+  margin: auto;
+}
+
+h1{
+    color: #0a043c;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    line-height:2px;
+    padding: auto;
+    margin: auto;
+}
+
+h2 {
+   color: #a3ddcb;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    line-height: 2px;
+    padding: auto;
+    margin: auto;
+}
+
+
+.text-center {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.img-circle {
+  border-radius: 50%;
+  border-image: auto;
+  padding: auto;
+  margin-top: 50px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+button {
+  background-color: #ffe3de;
+  color: #03506f;
+  padding: 15px 20px;
+  border-radius: 5px;
+  border-width: 0.08em;
+  border-color: #ffe3de;
+  font-family: 'Syne', sans-serif;
+  text-align: center;
+  width: auto;
+  margin: 10px 15px;
+}
+
+button:hover {
+  text-decoration: none;
+  background-color: grey;
+  color: white;
+}
+
+.card {
+  background: white;
+  opacity: 0.95;
+  width: 500px;
+  margin:20px 20px;
+  border-radius: 20px;
+  border: 15px solid #f6f5f5;
+  text-align: center;
+}
+
+/*Bottom page */
+
+a {
+  color: #0a043c;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #276678;
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding: auto;
+  text-align: center;
+  margin: auto 5px;
+}
+
+.list-inline {
+  list-style: none;
+  padding: auto;
+  text-align: center;
+  margin: 5px 50px 20px;
+}
+
+li i{
+   font-size: 30px;
+}
