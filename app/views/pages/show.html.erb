@@ -1,27 +1,20 @@
 <div class="show-container">
-  <div class="card">
+  <div class="card-product">
     <%= image_tag "logo_en.png", alt: "Laure Curallucci de Peretti, full-stack developer" %>
-
-    <p class="text-center"> I love almost everything, except mornings & endives.</p>
-    <p class="text-center">I decided to believe in Le Wagon's programme, so here I am 🙂 </p>
-
-    <%= link_to "Discover my projects", root_path, class:"btn btn-action" %>
-
-  </div>
-
-  <div class="card">
-      <h2 class="text-center">Follow my adventures below:</h2>
-      <ul class = "list-inline"> 
-          <li>
-              <a href="https://www.linkedin.com/in/laurecdp/">
-                  <i class="fab fa-linkedin"></i>
-              </a>
-          </li>
-          <li>
-              <a href="https://github.com/laurecdp">
-                  <i class="fab fa-github-alt"></i>
-              </a>
-          </li>
-      </ul>
+    <div class="card-product-infos">
+        <%= link_to "Discover my projects", root_path, class:"btn btn-action" %>
+        <ul class = "list-inline"> 
+            <li>
+                <%= link_to "https://www.linkedin.com/in/laurecdp/" do %>
+                    <i class="fab fa-linkedin"></i>
+                <% end %>
+            </li>
+            <li>
+                <%= link_to "https://github.com/laurecdp" do %>
+                <i class="fab fa-github-alt"></i>
+                <% end %>
+            </li>
+        </ul>
+    </div>
   </div>
 </div>
