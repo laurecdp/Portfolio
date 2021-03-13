@@ -112,4 +112,13 @@
   color: $darkblue;
 }
 
+.card-stack img {
+  object-fit: cover;
+  width: 100%;
+  margin-left: 10px;
+  margin-top: 10px;
+}
 
+.card-stack-info{
+  margin: 30px 40px;
+}
