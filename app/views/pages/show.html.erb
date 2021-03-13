@@ -1,5 +1,37 @@
 <div class="show-container">
   <div class="card-product">
+    <%= image_tag "logo.png", alt: "Laure Curallucci de Peretti, full-stack developer" %>
+    <div class="card-product-infos">
+        <%= link_to "Discover my projects", root_path, class:"btn btn-action" %>
+        <%= link_to "https://www.linkedin.com/in/laurecdp/" do %>
+            <i class="fab fa-linkedin"></i>
+            Linkedin
+        <% end %>
+        <%= link_to "https://github.com/laurecdp" do %>
+            <i class="fab fa-github-alt"></i>
+            GitHub
+        <% end %>
+    </div>
+  </div>
+  <div class="card-product">
+    <%= image_tag "logo_en.png", alt: "Laure Curallucci de Peretti, full-stack developer" %>
+    <div class="card-product-infos">
+        <%= link_to "Discover my projects", root_path, class:"btn btn-action" %>
+        <ul class = "list-inline"> 
+            <li>
+                <%= link_to "https://www.linkedin.com/in/laurecdp/" do %>
+                    <i class="fab fa-linkedin"></i>
+                <% end %>
+            </li>
+            <li>
+                <%= link_to "https://github.com/laurecdp" do %>
+                <i class="fab fa-github-alt"></i>
+                <% end %>
+            </li>
+        </ul>
+    </div>
+  </div>
+  <div class="card-product">
     <%= image_tag "logo_en.png", alt: "Laure Curallucci de Peretti, full-stack developer" %>
     <div class="card-product-infos">
         <%= link_to "Discover my projects", root_path, class:"btn btn-action" %>
