@@ -1,49 +1,4 @@
 // Specific CSS for your home-page
-.btn-greeting {
-    top: 50.6rem;
-    left: 41rem;
-    right: 0;
-    margin: 0 auto;
-    opacity: 0.5;
-}
-
-.btn-greeting a {
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 4rem;
-    font-size: 2.2rem;
-    font-weight: 400;
-}
-
-.icon-spinner-2:before {
-	content: "\e001";
-}
-
-@keyframes anim-rotate {
-	0% {
-		transform: rotate(0);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
-.spinner {
-	display: inline-block;
-	font-size:4em;
-	height: 1em;
-	line-height: 1;
-	margin: .5em;
-	animation: anim-rotate 2s infinite linear;
-	color: #fff;
-	text-shadow: 0 0 .25em rgba(255,255,255, .3);
-}
-.spinner--steps {
-	animation: anim-rotate 1s infinite steps(8);
-}
-.spinner--steps2 {
-	animation: anim-rotate 1s infinite steps(12);
-}
-
 @font-face {
 	font-family: 'icomoon';
 	src:url('https://s3.amazonaws.com/icomoon.io/4/Loading/icomoon.eot?-9haulc');
@@ -57,7 +12,6 @@
 
 [class^="icon-"], [class*=" icon-"] {
 	font-family: 'icomoon';
-	speak: none;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
@@ -69,26 +23,41 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.container-home {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+/* Button Enter */
+
+.btn-greeting {
+	margin: 280px;
+	opacity: 0.5;
+}
+
+.btn-greeting a {
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 4rem;
+	font-size: 2.2rem;
+	font-weight: 400;
+}
+
+a, a:visited {
+	text-decoration: none;
+	color: #444;
+	text-shadow: 0 1px 2px rgba(0,0,0, .3);
+	transition: color .3s;
+}
+a:hover, a:active {
+	color: #ccc;
+}
+
+/* Spinner */
+
 .icon-spinner:before {
-	content: "\e000";
-}
-.icon-spinner-2:before {
 	content: "\e001";
-}
-.icon-spinner-3:before {
-	content: "\e002";
-}
-.icon-spinner-4:before {
-	content: "\e003";
-}
-.icon-spinner-5:before {
-	content: "\e004";
-}
-.icon-spinner-6:before {
-	content: "\e005";
-}
-.icon-spinner-7:before {
-	content: "\e006";
 }
 
 @keyframes anim-rotate {
@@ -100,13 +69,12 @@
 	}
 }
 .spinner {
-	display: inline-block;
 	font-size:4em;
 	height: 1em;
 	line-height: 1;
 	margin: .5em;
 	animation: anim-rotate 2s infinite linear;
-	color: #fff;
+	color: #444;
 	text-shadow: 0 0 .25em rgba(255,255,255, .3);
 }
 .spinner--steps {
@@ -114,20 +82,4 @@
 }
 .spinner--steps2 {
 	animation: anim-rotate 1s infinite steps(12);
-}
-
-.talign-center {
-	text-align: center;
-}
-a, a:visited {
-	text-decoration: none;
-	color: #444;
-	text-shadow: 0 1px 2px rgba(0,0,0, .3);
-	transition: color .3s;
-}
-a:hover, a:active {
-	color: #ccc;
-}
-footer {
-	margin-top: 2em;
 }
