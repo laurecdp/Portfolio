@@ -1,52 +1,56 @@
 <div class="show-container">
-  <div class="card-product">
-    <%= image_tag "logo.png", alt: "Laure Curallucci de Peretti, full-stack developer" %>
-    <div class="card-product-infos">
-        <%= link_to "Discover my projects", root_path, class:"btn btn-action" %>
-        <%= link_to "https://www.linkedin.com/in/laurecdp/" do %>
-            <i class="fab fa-linkedin"></i>
-            Linkedin
-        <% end %>
-        <%= link_to "https://github.com/laurecdp" do %>
-            <i class="fab fa-github-alt"></i>
-            GitHub
-        <% end %>
+
+    <div class="container-icons">
+        <%# Icons  %>
+        <div class="card-icon">
+            <%# <%= image_tag "logo.png", alt: "Laure Curallucci de Peretti, full-stack developer" %>
+            <div class="card-icon-infos">
+                <div class="icon-card">
+                    <%= link_to do %>
+                        <i class="fas fa-address-card"></i>
+                        Profile
+                    <% end %>
+                </div>
+                <div class="icon-card">
+                    <%= link_to(root_path) do %>
+                        <i class="fas fa-folder"></i>
+                        Projects
+                    <% end %>
+                </div>
+                <div class="icon-card">
+                    <%= link_to "https://www.linkedin.com/in/laurecdp/" do %>
+                        <i class="fab fa-linkedin"></i>
+                        Linkedin
+                    <% end %>
+                </div>
+                <div class="icon-card">
+                    <%= link_to "https://github.com/laurecdp" do %>
+                        <i class="fab fa-github-alt"></i>
+                        GitHub
+                    <% end %>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="card-product">
-    <%= image_tag "logo_en.png", alt: "Laure Curallucci de Peretti, full-stack developer" %>
-    <div class="card-product-infos">
-        <%= link_to "Discover my projects", root_path, class:"btn btn-action" %>
-        <ul class = "list-inline"> 
-            <li>
-                <%= link_to "https://www.linkedin.com/in/laurecdp/" do %>
-                    <i class="fab fa-linkedin"></i>
-                <% end %>
-            </li>
-            <li>
-                <%= link_to "https://github.com/laurecdp" do %>
-                <i class="fab fa-github-alt"></i>
-                <% end %>
-            </li>
-        </ul>
+
+    <div class="container-cards">
+        <%# Hidden cards  %>
+        <div class="hidden">
+            <div class="card-resume">
+                <%= image_tag "my_profile.jpg", alt: "Laure Curallucci de Peretti, full-stack developer", class: "img-circle" %>
+                <div class="card-resume-info">
+                   <p><strong>Laure Curallucci de Peretti - Full stack Développeuse</strong></p>
+                   <p>Reconvertie professionnellement, j'ai découvert chez moi une réelle passion pour le code. Ayant une approche très orientée solutions, j'aime optimiser l'expérience utilisateur que ce soit visuellement ou techniquement.</p>
+                </div>
+            </div>
+            <div class="card-resume">
+                <%= image_tag "my_profile.jpg", alt: "Laure Curallucci de Peretti, full-stack developer", class: "img-circle" %>
+                <div class="card-resume-info">
+                   <p><strong>Laure Curallucci de Peretti - Full stack Développeuse</strong></p>
+                   <p>Reconvertie professionnellement, j'ai découvert chez moi une réelle passion pour le code. Ayant une approche très orientée solutions, j'aime optimiser l'expérience utilisateur que ce soit visuellement ou techniquement.</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="card-product">
-    <%= image_tag "logo_en.png", alt: "Laure Curallucci de Peretti, full-stack developer" %>
-    <div class="card-product-infos">
-        <%= link_to "Discover my projects", root_path, class:"btn btn-action" %>
-        <ul class = "list-inline"> 
-            <li>
-                <%= link_to "https://www.linkedin.com/in/laurecdp/" do %>
-                    <i class="fab fa-linkedin"></i>
-                <% end %>
-            </li>
-            <li>
-                <%= link_to "https://github.com/laurecdp" do %>
-                <i class="fab fa-github-alt"></i>
-                <% end %>
-            </li>
-        </ul>
-    </div>
-  </div>
+
 </div>

@@ -8,94 +8,97 @@
   font-size: 15px;
   line-height: 2px;
   padding: 200px 1px;
-
-  h1{
-    color: #0a043c;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 20px;
-    line-height:2px;
-    padding: auto;
-    margin: auto;
-
-  p {
-    color: #03506f;
-    padding: auto;
-    margin: auto;
-
-  h2 {
-   color: #a3ddcb;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 18px;
-    line-height: 2px;
-    padding: auto;
-    margin: auto;
-  }
-  }
-  }
+  display: flex;
 }
 
-/* Card */
-
-
-.btn-action {
-  background-color: #ffe3de;
-  color: #03506f;
-  padding: 15px 20px;
-  border-radius: 5px;
-  border-width: 0.08em;
-  border-color: #ffe3de;
-  font-family: 'Syne', sans-serif;
-}
-
-.btn-action:hover {
-  text-decoration: none;
-  background-color: #a7cfe8;
-  color: white;
+/* Icon Card */
+.container-icons {
+  width: 15%;
+  height: 15%;
 }
 
 .fab {
-  color: #0a043c;
+  color: $darkblue;
   text-decoration: none;
   font-size: 30px;
 }
 
 .fab:hover {
-  color: #a7cfe8;
+  color: $lightblue;
 }
 
-.list-inline > li {
-  display: inline-block;
-  padding: auto;
-  text-align: center;
-  margin: auto 5px;
+.fas {
+  color: $darkblue;
+  text-decoration: none;
+  font-size: 30px;
 }
 
-.list-inline {
-  list-style: none;
-  padding: auto;
-  text-align: center;
-  margin: 5px 50px 20px;
+.fas:hover {
+  color: $lightblue;
 }
 
-.card-product {
+.icon-card {
+  margin-bottom: 20px;
+}
+
+.icon-card a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-card a:hover {
+  color: $lightblue;
+}
+
+.card-icon {
   overflow: hidden;
   display: flex;
   align-items: center;
 }
 
-.card-product img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
+
+.card-icon .card-icon-infos {
+  padding: 16px;
+  // display:flex;
 }
 
-.card-product h2 {
+/* Resume Card */
+
+/* .hidden {
+  display: none;
+} */
+
+.container-cards {
+  width: 100%;
+  overflow: hidden;
+  height: 350px;
+  background: white;
+  box-shadow: 0 0 15px;
+  // display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.card-resume {
+  display: flex;
+}
+
+.card-resume img {
+  object-fit: cover;
+  width: 100px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.card-resume h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-product p {
+.card-resume p {
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
@@ -103,7 +106,10 @@
   margin-top: 8px;
 }
 
-.card-product .card-product-infos {
+.card-resume .card-resume-info {
   padding: 16px;
-  display:flex;
+  width: 100%;
+  color: $darkblue;
 }
+
+
