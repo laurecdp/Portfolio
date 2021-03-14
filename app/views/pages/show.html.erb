@@ -5,26 +5,26 @@
         <div class="card-icon">
             <%# <%= image_tag "logo.png", alt: "Laure Curallucci de Peretti, full-stack developer" %>
             <div class="card-icon-infos">
-                <div class="icon-card">
+                <div class="icon-card" id="icon-profile">
                     <%= link_to do %>
                         <i class="fas fa-address-card"></i>
-                        Profile
+                        Profil
                     <% end %>
                 </div>
-                <div class="icon-card">
-                    <%= link_to(root_path) do %>
+                <div class="icon-card" id="icon-projets">
+                    <%= link_to do %>
                         <i class="fas fa-folder"></i>
-                        Projects
+                        Projets
                     <% end %>
                 </div>
                 <div class="icon-card">
-                    <%= link_to "https://www.linkedin.com/in/laurecdp/" do %>
+                    <%= link_to "https://www.linkedin.com/in/laurecdp/", target: '_blank' do %>
                         <i class="fab fa-linkedin"></i>
                         Linkedin
                     <% end %>
                 </div>
                 <div class="icon-card">
-                    <%= link_to "https://github.com/laurecdp" do %>
+                    <%= link_to "https://github.com/laurecdp", target: '_blank' do %>
                         <i class="fab fa-github-alt"></i>
                         GitHub
                     <% end %>
@@ -33,21 +33,51 @@
         </div>
     </div>
 
-    <%# Hidden cards  
-     <div class="hidden"> %>
-        <div class="container-cards hidden">
-            <div class="card-resume">
-                <%= image_tag "my_profile.jpg", alt: "Laure Curallucci de Peretti, full-stack developer", class: "img-circle" %>
-                <div class="card-resume-info">
-                   <p><strong>Laure Curallucci de Peretti - Full stack Développeuse</strong></p>
-                   <p>Reconvertie professionnellement, j'ai découvert chez moi une réelle passion pour le code. Ayant une approche très orientée solutions, j'aime optimiser l'expérience utilisateur que ce soit visuellement ou techniquement.</p>
-                </div>
+    <%# Hidden cards %>
+    <div class="container-cards hidden">
+        <div class="card-resume" id="card-resume">
+            <%= image_tag "my_profile.jpg", alt: "Laure Curallucci de Peretti, full-stack developer", class: "img-circle" %>
+            <div class="card-resume-info">
+            <p><strong>Laure Curallucci de Peretti - Full stack Développeuse</strong></p>
+            <p>Reconvertie professionnellement, j'ai découvert chez moi une réelle passion pour le code. Ayant une approche très orientée solutions, j'aime optimiser l'expérience utilisateur que ce soit visuellement ou techniquement.</p>
             </div>
-            <div class="card-stack">
-                <div class="card-stack-info">
-                   <p><strong>Stack Technique</strong></p>
-                   <%= image_tag "web_icons.svg", alt: "Stack Technique" %>
-                </div>
+        </div>
+        <div class="card-stack" id="card-stack">
+            <div class="card-stack-info">
+            <p><strong>Stack Technique</strong></p>
+            <%= image_tag "web_icons.svg", alt: "Stack Technique" %>
+            </div>
+        </div>
+    </div>
+    <div class="container-projects hidden">
+        <div class="card" id="card-apparat">
+            <%= image_tag "apparat.jpg", alt: "Photo by Lívia Chauar on Unsplash", class: "img-top" %>
+            <div class="card-body">
+                <h5 class="card-title">Apparat</h5>
+                <p class="card-text">Site de location de costumes</p>
+                <%= link_to "https://apparat.herokuapp.com/", target: '_blank', class: "btn btn-primary" do %>
+                Découvrir
+                <% end %>
+            </div>
+        </div>
+        <div class="card" id="card-cocktails">
+            <%= image_tag "cocktail.png", alt: "Cocktail", class: "img-top" %>
+            <div class="card-body">
+                <h5 class="card-title">Tales of Fancy</h5>
+                <p class="card-text">Application de création de cocktails</p>
+                <%= link_to "https://talesoffancy.herokuapp.com/", target: '_blank', class: "btn btn-primary" do %>
+                Découvrir
+                <% end %>
+            </div>
+        </div>
+        <div class="card" id="card-easycare">
+            <%= image_tag "doctor.png", alt: "EasyCare", class: "img-top" %>
+            <div class="card-body">
+                <h5 class="card-title">EasyCare</h5>
+                <p class="card-text">Dashboard pour sages-femmes</p>
+                <%= link_to "https://www.easy-care.org/", target: '_blank', class: "btn btn-primary" do %>
+                Découvrir
+                <% end %>
             </div>
         </div>
     </div>

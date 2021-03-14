@@ -11,7 +11,12 @@
   display: flex;
 }
 
-/* Icon Card */
+.hidden {
+  display: none;
+} 
+
+/* Icon Cards */
+
 .container-icons {
   width: 15%;
   height: 15%;
@@ -63,11 +68,7 @@
   // display:flex;
 }
 
-/* Resume Card */
-
-.hidden {
-  display: none;
-} 
+/* Profile Part */
 
 .container-cards {
   width: 100%;
@@ -75,7 +76,6 @@
   height: 350px;
   background: white;
   box-shadow: 0 0 15px;
-  // display: flex;
   align-items: center;
   margin: 20px;
 }
@@ -119,6 +119,17 @@
   margin-top: 10px;
 }
 
-.card-stack-info{
+.card-stack-info {
   margin: 30px 40px;
+}
+
+/* Projects Part */
+
+.container-projects {
+  width: 100%;
+  overflow: hidden;
+  height: 350px;
+  align-items: center;
+  margin: 20px;
+  display: flex;
 }
