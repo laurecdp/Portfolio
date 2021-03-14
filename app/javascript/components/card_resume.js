@@ -1,12 +1,14 @@
-const cardResume = () => {
+const showCards = document.querySelector(".container-cards");
+console.log(showCards);
 
-  const showCards = document.querySelector("");
-  showCards.forEach(element => {
-    element.addEventListener("click", (event) => {
-      document.querySelector("").classList.toggle("hidden")
-    })
-  })
+const profileButton = document.querySelector(".icon-card");
+console.log(profileButton);
 
-}
+profileButton.addEventListener("click", (event) => {
+    showCards.classList.toggle("hidden")
+});
 
-export { cardResume }
+
+const cardResume = () => { };
+
+export { cardResume };
