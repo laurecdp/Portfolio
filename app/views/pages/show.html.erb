@@ -49,34 +49,28 @@
             </div>
         </div>
     </div>
-    <div class="container-projects hidden">
-        <div class="card" id="card-apparat">
-            <%= image_tag "apparat.jpg", alt: "Photo by Lívia Chauar on Unsplash", class: "img-top" %>
-            <div class="card-body">
-                <h5 class="card-title">Apparat</h5>
-                <p class="card-text">Site de location de costumes</p>
-                <%= link_to "https://apparat.herokuapp.com/", target: '_blank', class: "btn btn-primary" do %>
-                Découvrir
-                <% end %>
-            </div>
-        </div>
-        <div class="card" id="card-cocktails">
+    <div class="container-projects d-none">
+        <div class="card-projects" id="card-cocktails">
             <%= image_tag "cocktail.png", alt: "Cocktail", class: "img-top" %>
             <div class="card-body">
-                <h5 class="card-title">Tales of Fancy</h5>
-                <p class="card-text">Application de création de cocktails</p>
-                <%= link_to "https://talesoffancy.herokuapp.com/", target: '_blank', class: "btn btn-primary" do %>
-                Découvrir
+                <%= link_to "https://talesoffancy.herokuapp.com/", target: '_blank' do %>
+                    <h5 class="card-title">Tales of Fancy</h5>
                 <% end %>
             </div>
         </div>
-        <div class="card" id="card-easycare">
+        <div class="card-projects" id="card-easycare">
             <%= image_tag "doctor.png", alt: "EasyCare", class: "img-top" %>
             <div class="card-body">
-                <h5 class="card-title">EasyCare</h5>
-                <p class="card-text">Dashboard pour sages-femmes</p>
-                <%= link_to "https://www.easy-care.org/", target: '_blank', class: "btn btn-primary" do %>
-                Découvrir
+                <%= link_to "https://www.easy-care.org/", target: '_blank' do %>
+                    <h5 class="card-title">EasyCare</h5>
+                <% end %>
+            </div>
+        </div>
+          <div class="card-projects" id="card-apparat">
+            <%= image_tag "apparat.jpg", alt: "Photo by Lívia Chauar on Unsplash", class: "img-top" %>
+            <div class="card-body">
+                <%= link_to "https://apparat.herokuapp.com/", target: '_blank' do %>
+                    <h5 class="card-title">Apparat</h5>
                 <% end %>
             </div>
         </div>

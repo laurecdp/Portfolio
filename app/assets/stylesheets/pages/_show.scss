@@ -1,25 +1,27 @@
 /*General settings */
 .show-container {
-  margin: 0 auto; 
-  width: 40%;
+  width: 40vw;
   height: 100vh;
   font-family: 'Syne', sans-serif;
-  color: #03506f;
   font-size: 15px;
   line-height: 2px;
-  padding: 200px 1px;
+  padding: 12% 30vw;
   display: flex;
+  text-align: center;
+  background-image: asset-url('laptop.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  overflow: hidden;
 }
 
-.hidden {
-  display: none;
-} 
 
 /* Icon Cards */
 
 .container-icons {
   width: 15%;
   height: 15%;
+  position: static;
 }
 
 .fab {
@@ -64,20 +66,22 @@
 
 
 .card-icon .card-icon-infos {
-  padding: 16px;
-  // display:flex;
+  margin-top: 5vh;
 }
 
 /* Profile Part */
+.hidden {
+  display: none;
+} 
 
 .container-cards {
   width: 100%;
   overflow: hidden;
   height: 350px;
   background: white;
-  box-shadow: 0 0 15px;
   align-items: center;
-  margin: 20px;
+  margin-top: 5vh;
+  border-radius: 6px;
 }
 
 .card-resume {
@@ -107,9 +111,10 @@
 }
 
 .card-resume .card-resume-info {
-  padding: 16px;
+  padding: 1.8em;
   width: 100%;
   color: $darkblue;
+  text-align: justify;
 }
 
 .card-stack img {
@@ -121,15 +126,47 @@
 
 .card-stack-info {
   margin: 30px 40px;
+  text-align: center;
 }
 
 /* Projects Part */
+.d-none {
+  display: none;
+}
 
 .container-projects {
   width: 100%;
   overflow: hidden;
   height: 350px;
-  align-items: center;
-  margin: 20px;
+  align-items: flex-start;
+  margin-top: 5vh;
   display: flex;
+}
+
+.btn-lightblue {
+  background: $lightblue;
+}
+
+.card-projects {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  width: 100%;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 2px;
+  margin-left: 15px;
+}
+
+.card-body a {
+  text-align: center;
+  text-decoration: none;
+  color: $darkblue;
+}
+
+.card-body a:hover {
+  color: $lightblue;
 }

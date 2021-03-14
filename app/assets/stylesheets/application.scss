@@ -13,12 +13,8 @@
 @import "pages/index";
 
 body {
-  background-image: asset-url('laptop.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: auto;
-  // overflow: hidden;
-}
+  background-color: white;
+} 
 
 @font-face {
 	font-family: 'icomoon';
@@ -29,17 +25,4 @@ body {
 		url('https://s3.amazonaws.com/icomoon.io/4/Loading/icomoon.svg?-9haulc#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-	font-family: 'icomoon';
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
