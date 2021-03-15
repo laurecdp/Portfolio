@@ -29,6 +29,10 @@
 	font-weight: 400;
 }
 
+.btn-greeting a::backdrop{
+	background-image: asset-url('logo.gif');
+}
+
 /* Spinner */
 
 .icon-spinner:before {

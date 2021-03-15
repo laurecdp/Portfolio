@@ -1,20 +1,32 @@
 /*General settings */
 .show-container {
-  width: 40vw;
   height: 100vh;
-  font-family: 'Syne', sans-serif;
-  font-size: 15px;
-  line-height: 2px;
-  padding: 12% 30vw;
-  display: flex;
-  text-align: center;
   background-image: asset-url('laptop.png');
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
   overflow: hidden;
+  padding-top: 13%;
+  padding-left: 30%;
+  padding-right: 30%;
+  padding-bottom: 10%;
 }
 
+.datetime {
+  
+}
+
+.container-global {
+  height: 100%;
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  line-height: 2px;
+  display: flex;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  position: static;
+}
 
 /* Icon Cards */
 
@@ -77,7 +89,7 @@
 .container-cards {
   width: 100%;
   overflow: hidden;
-  height: 350px;
+  height: 25vw;
   background: white;
   align-items: center;
   margin-top: 5vh;
@@ -85,21 +97,19 @@
 }
 
 .card-resume {
-  display: flex;
+  // display: flex;
+  width: 100%;
 }
 
 .card-resume img {
-  object-fit: cover;
-  width: 100px;
-  border-radius: 50%;
-  margin-left: 10px;
-  margin-top: 10px;
+  width: 70%;
+  margin-top: 5%;
 }
 
-.card-resume h2 {
+.card-resume h6 {
   font-size: 16px;
-  font-weight: bold;
   margin: 0;
+  text-align: center;
 }
 
 .card-resume p {
@@ -111,23 +121,12 @@
 }
 
 .card-resume .card-resume-info {
-  padding: 1.8em;
+  padding: 2.2em;
   width: 100%;
   color: $darkblue;
   text-align: justify;
 }
 
-.card-stack img {
-  object-fit: cover;
-  width: 100%;
-  margin-left: 10px;
-  margin-top: 10px;
-}
-
-.card-stack-info {
-  margin: 30px 40px;
-  text-align: center;
-}
 
 /* Projects Part */
 .d-none {
