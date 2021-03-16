@@ -23,7 +23,7 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { showPage } from '../components/show_page';
-// import { initFlatpickr } from "../plugins/flatpickr";
+import { initFlatpickr } from "../plugins/flatpickr";
 
 document.addEventListener('turbolinks:before-cache', () => {
   if (document.querySelector('.container-cards')) {
@@ -41,5 +41,5 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   showPage();
-  // initFlatpickr();
+  initFlatpickr();
 });
