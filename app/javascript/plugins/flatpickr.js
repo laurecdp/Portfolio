@@ -2,25 +2,22 @@ import flatpickr from "flatpickr";
 import { French } from "flatpickr/dist/l10n/fr.js"
 
 const initFlatpickr = () => {
-  flatpickr(".datepicker", {
-    inline: true,
-    defaultDate: "today",
-    dateFormat: "d-m-Y H:i",
-    "locale": French,
-  });
 
-  flatpickr(".datetime-picker", {
-    altInput: true,
-    altFormat: "d F Y  -  H:i",
-    ariaDateFormat: "d F Y  -  H:i",
-    enableTime: true,
-    allowInput: true,
-    defaultDate: "today",
-    dateFormat: "d-m-Y H:i",
-    minuteIncrement: 5,
-    "locale": French,
-    maxDate: new Date().fp_incr(1) // 1 day from now
-  });
+  const chevron = document.querySelector(".fa-sort-up");
+  const calendar = document.querySelector(".calendar");
+
+  chevron.addEventListener("click", (event) => {
+    calendar.classList.toggle("calendar")
+    /* flatpickr(".calendar", {
+      inline: true,
+      altFormat: "d F Y  -  H:i",
+      ariaDateFormat: "d F Y  -  H:i",
+      enableTime: true,
+      defaultDate: "today",
+      dateFormat: "d-m-Y H:i",
+      "locale": French
+    }) */
+  })
 }
 
 export { initFlatpickr };

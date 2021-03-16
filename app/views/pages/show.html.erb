@@ -78,9 +78,9 @@
     </div>
 
     <div class="datetime">
-        <p><i class="fas fa-sort-up"></i></p> 
-        <%#= @time = DateTime.now.strftime("%H:%M") %>
-        <p class="calendar"><%= @date = Date.today.strftime("%d/%m/%Y") %></p>
+        <p class="calendar"></p>
+        <%#= <p><i class="fas fa-sort-up"></i></p> %>
+        <p><%= @time = DateTime.now.strftime("%H:%M") %> <%= @date = Date.today.strftime("%d/%m/%Y") %></p>
     </div>
     
 </div>
