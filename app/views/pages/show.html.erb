@@ -75,12 +75,13 @@
             </div>
         </div>
 
+        <div class='navbar'>
+            <p><i class="fas fa-sort-up"></i></p>
+            <div class="display datetime">
+                <p class="clock"></p>
+                <p class="calendar"><%=@date = Date.today.strftime("%d/%m/%Y")%></p>
+            </div>
+        </div>
     </div>
 
-    <div class="datetime">
-        <p class="calendar"></p>
-        <%#= <p><i class="fas fa-sort-up"></i></p> %>
-        <p><%= @time = DateTime.now.strftime("%H:%M") %> <%= @date = Date.today.strftime("%d/%m/%Y") %></p>
-    </div>
-    
 </div>

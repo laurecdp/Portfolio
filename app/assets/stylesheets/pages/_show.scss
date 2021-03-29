@@ -12,20 +12,6 @@
   padding-bottom: 10%;
 }
 
-.datetime {
-  color: $darkblue;
-  font-weight: 600;
-  display: flex;
-  margin-left: 90%;
-}
-
-.datetime p {
-  margin-top: 4%;
-  margin-bottom: 1rem;
-  margin-right: 1em;
-  text-align: center;
-}
-
 .container-global {
   height: 100%;
   font-family: 'Syne', sans-serif;
@@ -37,6 +23,34 @@
   overflow: hidden;
   position: static;
 }
+
+/* Windows navbar */ 
+
+.navbar {
+  color: $darkblue;
+  font-weight: 600;
+  display: flex;
+}
+
+.datetime {
+  color: $darkblue;
+  font-weight: 600;
+  margin-left: 90%;
+}
+
+.datetime p {
+  margin-top: 4%;
+  margin-bottom: 1rem;
+  margin-right: 1em;
+  text-align: center;
+}
+
+.clock {
+  color: $darkblue;
+  font-weight: 600;
+  display: flex;
+}
+
 
 /* Icon Cards */
 

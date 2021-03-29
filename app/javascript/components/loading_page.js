@@ -1,9 +1,5 @@
-const showPage = () => { 
+const loadingPage = () => {
 
-  window.addEventListener("load", (event) => {
-    
-  }) 
-  
   const showCards = document.querySelector(".container-cards");
   const showProjects = document.querySelector(".container-projects");
   const buttonProfile = document.getElementById("icon-profile");
@@ -23,4 +19,4 @@ const showPage = () => {
 
 };
 
-export { showPage };
+export { loadingPage };
