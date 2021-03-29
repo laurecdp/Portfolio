@@ -75,3 +75,199 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
+/*General settings */
+.show-container {
+  height: 100vh;
+  background-image: asset-url('laptop.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  overflow: hidden;
+  padding-top: 13%;
+  padding-left: 30%;
+  padding-right: 30%;
+  padding-bottom: 10%;
+}
+
+.container-global {
+  height: 100%;
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  line-height: 2px;
+  display: flex;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  position: static;
+}
+
+/* Windows navbar */ 
+
+.navbar {
+  color: $darkblue;
+  font-weight: 600;
+  display: flex;
+}
+
+.datetime {
+  color: $darkblue;
+  font-weight: 600;
+  margin-left: 90%;
+}
+
+.datetime p {
+  margin-top: 4%;
+  margin-bottom: 1rem;
+  margin-right: 1em;
+  text-align: center;
+}
+
+.clock {
+  color: $darkblue;
+  font-weight: 600;
+  display: flex;
+}
+
+
+/* Icon Cards */
+
+.container-icons {
+  width: 15%;
+  height: 15%;
+  position: static;
+}
+
+.fab {
+  color: $darkblue;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.fab:hover {
+  color: $lightblue;
+}
+
+.fas {
+  color: $darkblue;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.fas:hover {
+  color: $lightblue;
+}
+
+.icon-card {
+  margin-bottom: 20px;
+}
+
+.icon-card a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-card a:hover {
+  color: $lightblue;
+}
+
+.card-icon {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+
+.card-icon .card-icon-infos {
+  margin-top: 5vh;
+}
+
+/* Profile Part */
+.hidden {
+  display: none;
+} 
+
+.container-cards {
+  width: 100%;
+  overflow: hidden;
+  height: 25vw;
+  background: white;
+  align-items: center;
+  margin-top: 5vh;
+  border-radius: 6px;
+}
+
+.card-resume {
+  // display: flex;
+  width: 100%;
+}
+
+.card-resume img {
+  width: 70%;
+  margin-top: 5%;
+}
+
+.card-resume h6 {
+  font-size: 16px;
+  margin: 0;
+  text-align: center;
+}
+
+.card-resume p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-resume .card-resume-info {
+  padding: 2.2em;
+  width: 100%;
+  color: $darkblue;
+  text-align: justify;
+}
+
+
+/* Projects Part */
+.d-none {
+  display: none;
+}
+
+.container-projects {
+  width: 100%;
+  overflow: hidden;
+  height: 350px;
+  align-items: flex-start;
+  margin-top: 5vh;
+  display: flex;
+}
+
+.btn-lightblue {
+  background: $lightblue;
+}
+
+.card-projects {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  width: 100%;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 2px;
+  margin-left: 15px;
+}
+
+.card-body a {
+  text-align: center;
+  text-decoration: none;
+  color: $darkblue;
+}
+
+.card-body a:hover {
+  color: $lightblue;
+}

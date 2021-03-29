@@ -1,20 +1,15 @@
 const loadingPage = () => {
-
-  const showCards = document.querySelector(".container-cards");
-  const showProjects = document.querySelector(".container-projects");
-  const buttonProfile = document.getElementById("icon-profile");
-  const buttonProjets = document.getElementById("icon-projets");
-
-  buttonProfile.addEventListener("click", (event) => {
+  const windows = document.querySelector(".container-global");
+  windows.insertAdjacentHTML('afterbegin', "<div class='loading-page'><h2 class= 'btn-greeting'>Enter</h2><div class='spinner icon-spinner' aria-hidden='true'></div></div>");
+  const loadingPage = document.querySelector(".loading-page");
+  const containerIcons = document.querySelector(".container-icons");
+  const navbar = document.querySelector(".navbar");
+  const enterButton = document.querySelector(".btn-greeting");
+  enterButton.addEventListener("click", (event) => {
     event.preventDefault();
-    showCards.classList.toggle("hidden");
-    showProjects.classList.add("d-none");
-  })
-
-  buttonProjets.addEventListener("click", (event) => {
-    event.preventDefault();
-    showProjects.classList.toggle("d-none");
-    showCards.classList.add("hidden");
+    loadingPage.classList.add("d-none");
+    containerIcons.classList.remove('d-none');
+    navbar.classList.remove('d-none');
   })
 
 };
