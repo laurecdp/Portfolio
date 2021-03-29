@@ -36,6 +36,18 @@ $tablet-width: 530px;
   }
 }
 
+.user-icon-bg {
+  margin: 0 auto;
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  background-image: asset-url('my_profile.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  cursor: pointer;
+  }
+
 .wrapper {
   margin: 0 auto;
   width: 100%;
@@ -69,16 +81,6 @@ $tablet-width: 530px;
         height: 140px;
         font-size: 110%;
         position: relative;
-        .user-icon-bg {
-          margin: 0 auto;
-          width: 140px;
-          height: 140px;
-          border-radius: 100%;
-          background-image: asset-url('my_profile.jpg');
-          opacity: 0.3;
-          position: relative;
-          z-index: -1;
-        }
       }
       #username-container {
         margin-bottom: 40px;

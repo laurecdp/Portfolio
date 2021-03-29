@@ -1,162 +1,144 @@
 <div class="show-container">
 
-    <%# <div class="container-global"> %>
-    <div class="wrapper">
+    <div class="container-global">
 
         <!--Login Page  -->
-      <div id="login-page" class="login-page">
-        <div class="login-page-inner">
-          <!-- User Icon -->
-          <div id="user-icon-container">
-            <div class="user-icon-bg"></div>
-          </div>    
-          <!-- Username -->
-          <div id="username-container">
-            <h2>User</h2>
-          </div>      
-
-          <div class='loading-page'>
-            <div class='spinner icon-spinner' aria-hidden='true'></div>
-          </div>
-          
-        </div>
-      </div>
-
-      <div class="container-principal">
-
-          <div class="container-icons d-none">
-              <%# Icons  %>
-              <div class="card-icon">
-                  <%# <%= image_tag "logo.png", alt: "Laure Curallucci de Peretti, full-stack developer" %>
-                  <div class="card-icon-infos">
-                      <div class="icon-card" id="icon-profile">
-                          <%= link_to do %>
-                              <i class="fas fa-address-card"></i>
-                              Profil
-                          <% end %>
-                      </div>
-                      <div class="icon-card" id="icon-projets">
-                          <%= link_to do %>
-                              <i class="fas fa-folder"></i>
-                              Projets
-                          <% end %>
-                      </div>
-                      <div class="icon-card">
-                          <%= link_to "https://www.linkedin.com/in/laurecdp/", target: '_blank' do %>
-                              <i class="fab fa-linkedin"></i>
-                              Linkedin
-                          <% end %>
-                      </div>
-                      <div class="icon-card">
-                          <%= link_to "https://github.com/laurecdp", target: '_blank' do %>
-                              <i class="fab fa-github-alt"></i>
-                              GitHub
-                          <% end %>
-                      </div>
-                  </div>
+        <div id="login-page" class="login-page">
+          <div class="login-page-inner">
+            <!-- User Icon -->
+            <div id="user-icon-container">
+              <div class="user-icon-bg">
               </div>
-          </div>
-
-          <%# Hidden cards %>
-          <div class="container-cards hidden">
-              <div class="card-resume">
-                  <%# <%= image_tag "my_profile.jpg", alt: "Laure Curallucci de Peretti, full-stack developer", class: "img-circle" %>
-                  <%= image_tag "web_icons.svg", alt: "Stack Technique" %>
-                  <div class="card-resume-info">
-                      <h6><strong>Laure Curallucci de Peretti </strong></h6>
-                      <h6>Full stack Développeuse</h6>
-                      <p>Reconvertie professionnellement, j'ai découvert chez moi une réelle passion pour le code. Ayant une approche très orientée solutions, j'aime optimiser l'expérience utilisateur que ce soit visuellement ou techniquement.</p>
-                  </div>  
-              </div>
-          </div>
-
-          <div class="container-projects d-none">
-              <div class="card-projects" id="card-cocktails">
-                  <%= image_tag "cocktail.png", alt: "Cocktail", class: "img-top" %>
-                  <div class="card-body">
-                      <%= link_to "https://talesoffancy.herokuapp.com/", target: '_blank' do %>
-                          <h5 class="card-title">Tales of Fancy</h5>
-                      <% end %>
-                  </div>
-              </div>
-              <div class="card-projects" id="card-easycare">
-                  <%= image_tag "doctor.png", alt: "EasyCare", class: "img-top" %>
-                  <div class="card-body">
-                      <%= link_to "https://www.easy-care.org/", target: '_blank' do %>
-                          <h5 class="card-title">EasyCare</h5>
-                      <% end %>
-                  </div>
-              </div>
-              <div class="card-projects" id="card-apparat">
-                  <%= image_tag "apparat.jpg", alt: "Photo by Lívia Chauar on Unsplash", class: "img-top" %>
-                  <div class="card-body">
-                      <%= link_to "https://apparat.herokuapp.com/", target: '_blank' do %>
-                          <h5 class="card-title">Apparat</h5>
-                      <% end %>
-                  </div>
-              </div>
-          </div>
-
-      </div>
-
-      <div class='navbar d-none'>
-          <p><i class="fas fa-sort-up"></i></p>
-          <div class="display datetime">
-              <p class="clock"></p>
-              <p class="calendar"><%=@date = Date.today.strftime("%d/%m/%Y")%></p>
-          </div>
-      </div>
-
-      <!-- Welcome page -->
-      <div class="home-page" id="home-page">
-        <!--  Main section of home page -->
-        <div class="main">
-          <i class="fa fa-internet-explorer fa-2x home-icon" style="color:#0288D1;;"></i>
-          <i class="fa fa-pinterest-p fa-2x home-icon" style="color:#D32F2F;"></i>
-          <i class="fa fa-opera fa-2x home-icon" style="color:#B71C1C;"></i>
-          <i class="fa fa-whatsapp fa-2x home-icon" style="color:#388E3C;"></i>
-          
-          <div class="startup-menu" id="startup-menu">
-            <i id="fa-bars" class="fa fa-bars fa-lg icons" style="text-transform: uppercase;font-weight: bold"><span class="span">Start</span></i>
-          
-            <div class="startup-menu-icons">
-              <i class="fa fa-user-circle fa-lg icons"><span class="span">User</span></i>
-              <i class="fa fa-folder-open fa-lg icons"><span class="span">File Manager</span></i>
-              <i class="fa fa-cog fa-lg icons"><span class="span">Settings</span></i>
-              <i class="fa fa-power-off fa-lg icons"><span class="span">Power</span></i>
+            </div>    
+            <!-- Username -->
+            <div id="username-container">
+              <h2>Laure CdP</h2>
             </div>
           </div>
         </div>
-        
-        <!--  Taskbar at the bottom of the page-->
-        <div class="taskbar taskbar-horizontal">
-          <!--   Startup button-->
-          <div class="startup-button active" id="startup-button" onclick="toggleMenu()">
-            <i class="fa fa-windows fa-lg"></i>
-          </div>
-          
-          <!-- Search bar -->
-          <div class="searchbar-container">
-            <input type="text" id="searchbox" placeholder="Type here to search">
-          </div>
-          
-          <!-- Pinned apps-->
-          <div class="pinned-apps">
-            <i class="fa fa-chrome fa-lg"></i>
-            <i class="fa fa-opera fa-lg"></i>
-            <i class="fa fa-internet-explorer fa-lg"></i>
-            <i class="fa fa-firefox fa-lg"></i>
-          </div>
-          
-          <!-- Date amd time-->
-          <div class="data-time-container">
-            <div id="time">11:51 PM</div>
-            <div id="date">2/19/2018</div>
-          </div>
-          
-        </div>
-      </div>
 
-    </div>
+        <!--  Main section -->
+        <div class="container-principal">
+
+            <div id="windows-gif" class="windows-gif d-none">
+              <%= image_tag "logo.gif", alt: "Logo" %>
+            </div>
+
+            <div class="container-icons d-none">
+                <%# Pinned Apps %>
+                <div class="card-icon pinned-apps">
+                    <%# <%= image_tag "logo.png", alt: "Laure Curallucci de Peretti, full-stack developer" %>
+                    <div class="card-icon-infos">
+                        <div class="icon-card" id="icon-profile">
+                            <%= link_to do %>
+                                <i class="fas fa-address-card"></i>
+                                Profil
+                            <% end %>
+                        </div>
+                        <div class="icon-card" id="icon-projets">
+                            <%= link_to do %>
+                                <i class="fas fa-folder"></i>
+                                Projets
+                            <% end %>
+                        </div>
+                        <div class="icon-card">
+                            <%= link_to "https://www.linkedin.com/in/laurecdp/", target: '_blank' do %>
+                                <i class="fab fa-linkedin"></i>
+                                Linkedin
+                            <% end %>
+                        </div>
+                        <div class="icon-card">
+                            <%= link_to "https://github.com/laurecdp", target: '_blank' do %>
+                                <i class="fab fa-github-alt"></i>
+                                GitHub
+                            <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <%# Hidden cards %>
+            <div class="container-cards hidden">
+                <div class="card-resume">
+                    <%# <%= image_tag "my_profile.jpg", alt: "Laure Curallucci de Peretti, full-stack developer", class: "img-circle" %>
+                    <%= image_tag "web_icons.svg", alt: "Stack Technique" %>
+                    <div class="card-resume-info">
+                        <h6><strong>Laure Curallucci de Peretti </strong></h6>
+                        <h6>Full stack Développeuse</h6>
+                        <p>Reconvertie professionnellement, j'ai découvert chez moi une réelle passion pour le code. Ayant une approche très orientée solutions, j'aime optimiser l'expérience utilisateur que ce soit visuellement ou techniquement.</p>
+                    </div>  
+                </div>
+            </div>
+
+            <div class="container-projects d-none">
+                <div class="card-projects" id="card-cocktails">
+                    <%= image_tag "cocktail.png", alt: "Cocktail", class: "img-top" %>
+                    <div class="card-body">
+                        <%= link_to "https://talesoffancy.herokuapp.com/", target: '_blank' do %>
+                            <h5 class="card-title">Tales of Fancy</h5>
+                        <% end %>
+                    </div>
+                </div>
+                <div class="card-projects" id="card-easycare">
+                    <%= image_tag "doctor.png", alt: "EasyCare", class: "img-top" %>
+                    <div class="card-body">
+                        <%= link_to "https://www.easy-care.org/", target: '_blank' do %>
+                            <h5 class="card-title">EasyCare</h5>
+                        <% end %>
+                    </div>
+                </div>
+                <div class="card-projects" id="card-apparat">
+                    <%= image_tag "apparat.jpg", alt: "Photo by Lívia Chauar on Unsplash", class: "img-top" %>
+                    <div class="card-body">
+                        <%= link_to "https://apparat.herokuapp.com/", target: '_blank' do %>
+                            <h5 class="card-title">Apparat</h5>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--  Taskbar at the bottom of the page-->
+        <div class='navbar taskbar taskbar-horizontal'>
+              <!--   Startup button-->
+              <div class="startup-button active" id="startup-button" onclick="toggleMenu()">
+                <i class="fa fa-windows fa-lg"></i>
+              </div>
+              
+              <!-- Search bar -->
+              <div class="searchbar-container">
+                <input type="text" id="searchbox" placeholder="Type here to search">
+              </div>
+
+              <!-- Calendar -->
+              <p><i class="fas fa-sort-up"></i></p>
+
+              <!-- Date and time-->
+              <div class="datetime-container">
+                  <p class="clock"></p>
+                  <p class="calendar"><%=@date = Date.today.strftime("%d/%m/%Y")%></p>
+              </div>
+
+              <div class="main d-none">
+                <i class="fa fa-internet-explorer fa-2x home-icon" style="color:#0288D1;;"></i>
+                <i class="fa fa-pinterest-p fa-2x home-icon" style="color:#D32F2F;"></i>
+                <i class="fa fa-opera fa-2x home-icon" style="color:#B71C1C;"></i>
+                <i class="fa fa-whatsapp fa-2x home-icon" style="color:#388E3C;"></i>
+                
+                <div class="startup-menu" id="startup-menu">
+                  <i id="fa-bars" class="fa fa-bars fa-lg icons" style="text-transform: uppercase;font-weight: bold"><span class="span">Start</span></i>
+                
+                  <div class="startup-menu-icons">
+                    <i class="fa fa-user-circle fa-lg icons"><span class="span">User</span></i>
+                    <i class="fa fa-folder-open fa-lg icons"><span class="span">File Manager</span></i>
+                    <i class="fa fa-cog fa-lg icons"><span class="span">Settings</span></i>
+                    <i class="fa fa-power-off fa-lg icons"><span class="span">Power</span></i>
+                  </div>
+                </div>
+              </div>
+        </div>
+          
+      </div>
 
 </div>
