@@ -100,25 +100,7 @@
         </div>
 
         <!--  Taskbar at the bottom of the page-->
-        <div class='navbar taskbar taskbar-horizontal'>
-              <!--   Startup button-->
-              <div class="startup-button active" id="startup-button" onclick="toggleMenu()">
-                <i class="fa fa-windows fa-lg"></i>
-              </div>
-              
-              <!-- Search bar -->
-              <div class="searchbar-container">
-                <input type="text" id="searchbox" placeholder="Type here to search">
-              </div>
-
-              <!-- Calendar -->
-              <p><i class="fas fa-sort-up"></i></p>
-
-              <!-- Date and time-->
-              <div class="datetime-container">
-                  <p class="clock"></p>
-                  <p class="calendar"><%=@date = Date.today.strftime("%d/%m/%Y")%></p>
-              </div>
+        <div class='taskbar taskbar-horizontal'>
 
               <div class="main d-none">
                 <i class="fa fa-internet-explorer fa-2x home-icon" style="color:#0288D1;;"></i>
@@ -136,6 +118,25 @@
                     <i class="fa fa-power-off fa-lg icons"><span class="span">Power</span></i>
                   </div>
                 </div>
+              </div>
+
+              <!--   Startup button-->
+              <div class="startup-button active" id="startup-button" onclick="toggleMenu()">
+                <i class="fa fa-windows fa-lg"></i>
+              </div>
+              
+              <!-- Search bar -->
+              <div class="searchbar-container">
+                <input type="text" id="searchbox" placeholder="Type here to search">
+              </div>
+
+              <!-- Calendar -->
+              <p><i class="fas fa-sort-up"></i></p>
+
+              <!-- Date and time-->
+              <div class="datetime-container">
+                  <p class="clock"></p>
+                  <p class="calendar"><%=@date = Date.today.strftime("%d/%m/%Y")%></p>
               </div>
         </div>
           

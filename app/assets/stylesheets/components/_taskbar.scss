@@ -1,0 +1,123 @@
+/* Windows taskbar */ 
+
+.taskbar {
+  color: $darkblue;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  height: calc(600px - 556px);
+  //width: 100%;
+  flex-direction: row;
+  align-items: center;
+}
+
+.datetime {
+  color: $darkblue;
+  font-weight: 600;
+  margin-left: 90%;
+  line-height: 42px;
+  height: 42px;
+}
+
+.datetime p {
+  margin-top: 4%;
+  margin-bottom: 1rem;
+  margin-right: 1em;
+  text-align: center;
+}
+
+.clock {
+  color: $darkblue;
+  font-weight: 600;
+  display: flex;
+}
+
+ .main {
+      height: 556px;
+      width: 100%;
+      position: relative;
+      z-index: 200;
+      .fa, .home-icon {
+        width: 30px;
+        display: block;
+        padding: 13px;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+      }
+      .startup-menu {
+        position: relative;
+        top: -76px; 
+        left: -400px;
+        z-index: 5;
+        height: 400px; //400
+        width: 250px; //250
+        color: $darkblue;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        font-size: 12px;
+        font-family: helvetica;
+        overflow: hidden; 
+        transition: left 0.5s;
+        .icons {
+          width: 100%;
+          padding-left: 10px;
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+          }
+        }
+        span {
+          padding-left: 15px;
+        }
+        .startup-menu-icons {
+          display: flex;
+          flex-direction: column;
+          justify-content: strech;
+          align-items: stretch;
+        }
+      }
+  }
+  
+    .startup-button {
+      width: 50px;
+      min-width: 50px;
+      text-align: center;
+      color: $darkblue;
+      cursor: pointer;
+      &:hover {
+        color: #00bcd4;
+      }
+
+    }      
+    .active {
+        color: #00bcd4;
+      }
+    .searchbar-container {
+      width: 300px;
+      margin-right: 20%;
+      #searchbox {
+        height: 38px;
+        width: 100%;
+        padding-left: 2px;
+        font-family: sans-serif;
+        color: black;
+      }
+
+      }
+    .pinned-apps {
+      width: 350px;
+      height: 42px;
+      .fa {
+        height: 100%;
+        line-height: 42px;
+        padding: 0px 10px;
+        color: $darkblue;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+      }
+}

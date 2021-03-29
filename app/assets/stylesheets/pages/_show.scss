@@ -1,3 +1,5 @@
+/*General settings */
+
 //Fonts
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
 
@@ -5,16 +7,6 @@
 @mixin vertical-centering {
   top: 50%;
   transform: translateY(-50%);
-}
-
-//Media Queries
-$mobile-width: 340px;
-$tablet-width: 530px;
-
-@mixin mobile {
-  @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
-    @content;
-  }
 }
 
 //Animations
@@ -36,211 +28,13 @@ $tablet-width: 530px;
   }
 }
 
-.user-icon-bg {
-  margin: 0 auto;
-  width: 140px;
-  height: 140px;
-  border-radius: 100%;
-  background-image: asset-url('my_profile.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  cursor: pointer;
-  }
+//Media Queries
+$mobile-width: 340px;
+$tablet-width: 530px;
 
-.wrapper {
-  margin: 0 auto;
-  width: 100%;
-  height: 600px; 
-  .login-page,
-  .home-page {
-    position: relative;
-    width: 100%;
-    height: 600px;
-  }
-  .login-page {
-    font-size: 16px;
-    position: relative;
-    z-index: 3;
-    top: 0;
-    left: 0;
-    .login-page-inner {
-      width: 400px;
-      position: relative;
-      @include vertical-centering;
-      margin: 0 auto;
-      animation: fadeIn 1s ease-in-out, descend 0.5s ease-in-out;
-      #user-icon-container,
-      #username-container,
-      #input-container {
-        text-align: center;
-      }
-      #user-icon-container {
-        margin: 0 auto;
-        width: 140px;
-        height: 140px;
-        font-size: 110%;
-        position: relative;
-      }
-      #username-container {
-        margin-bottom: 40px;
-        margin-top: 20px;
-        font-family: "Roboto";
-        font-size: 105%;
-        color: white;
-      }
-      #input-container {
-        height: 50px;
-        #password {
-          margin: 0 auto;
-          height: 25px;
-          width: 300px;
-          padding-left: 5px;
-        }
-        #submit {
-          height: 31px;
-          padding: 0 10px;
-          position: relative;
-          right: 5px;
-          background-color: #bdbdbd;
-          border: none;
-          border-radius: 0 2px;
-          cursor: pointer;
-          .fa-arrow-right {
-            line-height: 28px;
-            color: white;
-          }
-          &:hover {
-            background-color: #9e9e9e;
-          }
-        }
-      }
-    }
-  }
-  .home-page {
-    position: absolute;
-    top: 0;
-    margin: 0 auto !important;
-    z-index: 1;
-    .main {
-      height: 556px;
-      width: 100%;
-      position: relative;
-      z-index: 200;
-      .fa, .home-icon {
-        width: 30px;
-        display: block;
-        padding: 13px;
-        cursor: pointer;
-        &:hover {
-          background-color: rgba(255, 255, 255, 0.2);
-        }
-      }
-      .startup-menu {
-        position: relative;
-        top: -76px; 
-        left: -400px;
-        z-index: 5;
-        height: 400px; //400
-        width: 250px; //250
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: stretch;
-        font-size: 12px;
-        font-family: helvetica;
-        overflow: hidden; 
-        transition: left 0.5s;
-        .icons {
-          width: 100%;
-          padding-left: 10px;
-          &:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-          }
-        }
-        span {
-          padding-left: 15px;
-        }
-        .startup-menu-icons {
-          display: flex;
-          flex-direction: column;
-          justify-content: strech;
-          align-items: stretch;
-        }
-      }
-    }
-  }
-  .taskbar {
-    height: calc(600px - 556px);
-    //width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    .startup-button,
-    .searchbar-container,
-    .date-time-container {
-      height: 42px;
-      line-height: 42px;
-    }
-    .startup-button {
-      width: 50px;
-      min-width: 50px;
-      text-align: center;
-      color: white;
-      cursor: pointer;
-      &:hover {
-        color: #00bcd4;
-      }
-
-    }      
-    .active {
-        color: #00bcd4;
-      }
-    .searchbar-container {
-      width: 300px;
-      margin-right: 20%;
-      #searchbox {
-        height: 38px;
-        width: 100%;
-        padding-left: 2px;
-        font-family: sans-serif;
-        color: black;
-      }
-    }
-    .pinned-apps {
-      width: 350px;
-      height: 42px;
-      .fa {
-        height: 100%;
-        line-height: 42px;
-        padding: 0px 10px;
-        color: white;
-        &:hover {
-          background-color: rgba(255, 255, 255, 0.2);
-        }
-      }
-    }
-    .data-time-container {
-      height: 40px;
-      width: 105px;
-      padding-left: 20px;
-      font-family: helvetica;
-      display: flex;
-      flex-direction: column;
-      border-left: 1px solid white;
-      text-align: center;
-      #time,
-      #date {
-        height: 20px;
-        line-height: 20px;
-        color: white;
-        font-size: 13px;
-        padding-right: 10px;
-        text-align: right;
-      }
-    }
+@mixin mobile {
+  @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
   }
 }
 
@@ -295,3 +89,213 @@ $tablet-width: 530px;
     display: none !important;
   }
 }
+
+// Main Containers 
+
+.show-container {
+	justify-content: center;
+	text-align: center;
+  height: 100vh;
+  background-image: asset-url('laptop.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  overflow: hidden;
+  padding-top: 13%;
+  padding-left: 30%;
+  padding-right: 30%;
+  padding-bottom: 10%;
+}
+
+.container-global {
+  height: 100%;
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  line-height: 2px;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  position: static;
+}
+
+.container-principal {
+  height: 90%;
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  line-height: 2px;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  position: static;
+}
+
+// Login Page
+
+.login-page {
+  @include vertical-centering;
+}
+
+#username-container {
+  margin-top: 20px;
+  font-family: 'Syne', sans-serif;
+  color: $darkblue;
+}
+
+.user-icon-bg {
+  margin: 30% auto 0;
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  background-image: asset-url('my_profile.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Pinned Apps */
+
+.container-icons {
+  width: 15%;
+  height: 15%;
+  position: static;
+}
+
+.fab {
+  color: $darkblue;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.fab:hover {
+  color: $lightblue;
+}
+
+.fas {
+  color: $darkblue;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.fas:hover {
+  color: $lightblue;
+}
+
+.icon-card {
+  margin-bottom: 20px;
+}
+
+.icon-card a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-card a:hover {
+  color: $lightblue;
+}
+
+.card-icon {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+
+.card-icon .card-icon-infos {
+  margin-top: 5vh;
+}
+
+/* Profile Part */
+
+.hidden {
+  display: none;
+} 
+
+.container-cards {
+  width: 100%;
+  overflow: hidden;
+  height: 25vw;
+  background: white;
+  align-items: center;
+  margin-top: 5vh;
+  border-radius: 6px;
+}
+
+.card-resume {
+  // display: flex;
+  width: 100%;
+}
+
+.card-resume img {
+  width: 70%;
+  margin-top: 5%;
+}
+
+.card-resume h6 {
+  font-size: 16px;
+  margin: 0;
+  text-align: center;
+}
+
+.card-resume p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-resume .card-resume-info {
+  padding: 2.2em;
+  width: 100%;
+  color: $darkblue;
+  text-align: justify;
+}
+
+
+/* Projects Part */
+.d-none {
+  display: none;
+}
+
+.container-projects {
+  width: 100%;
+  overflow: hidden;
+  height: 350px;
+  align-items: flex-start;
+  margin-top: 5vh;
+  display: flex;
+}
+
+.btn-lightblue {
+  background: $lightblue;
+}
+
+.card-projects {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  width: 100%;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 2px;
+  margin-left: 15px;
+}
+
+.card-body a {
+  text-align: center;
+  text-decoration: none;
+  color: $darkblue;
+}
+
+.card-body a:hover {
+  color: $lightblue;
+}
+
+
+
+
