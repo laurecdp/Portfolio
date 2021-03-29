@@ -3,6 +3,7 @@ const loadingPage = () => {
   const loginPage = document.getElementById("login-page");
   const userIcon = document.querySelector('.user-icon-bg');
   const gif = document.getElementById('windows-gif');
+  const startUpMenu = document.getElementById("startup-menu");
 
   userIcon.addEventListener("click", (event) => {
     event.preventDefault();
@@ -20,7 +21,7 @@ const loadingPage = () => {
   })
 
     //Toggle Menu
-    const startUpMenu = document.getElementById("startup-menu");
+    
     console.log(startUpMenu)
     document.getElementById("startup-button").classList.toggle("active");
   
