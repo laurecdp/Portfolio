@@ -102,27 +102,21 @@
         <!--  Taskbar at the bottom of the page-->
         <div class='taskbar taskbar-horizontal'>
 
-              <div class="main d-none">
-                <i class="fa fa-internet-explorer fa-2x home-icon" style="color:#0288D1;;"></i>
-                <i class="fa fa-pinterest-p fa-2x home-icon" style="color:#D32F2F;"></i>
-                <i class="fa fa-opera fa-2x home-icon" style="color:#B71C1C;"></i>
-                <i class="fa fa-whatsapp fa-2x home-icon" style="color:#388E3C;"></i>
-                
-                <div class="startup-menu" id="startup-menu">
-                  <i id="fa-bars" class="fa fa-bars fa-lg icons" style="text-transform: uppercase;font-weight: bold"><span class="span">Start</span></i>
-                
-                  <div class="startup-menu-icons">
-                    <i class="fa fa-user-circle fa-lg icons"><span class="span">User</span></i>
-                    <i class="fa fa-folder-open fa-lg icons"><span class="span">File Manager</span></i>
-                    <i class="fa fa-cog fa-lg icons"><span class="span">Settings</span></i>
-                    <i class="fa fa-power-off fa-lg icons"><span class="span">Power</span></i>
-                  </div>
-                </div>
+              <!-- Startup button-->
+              <div class="startup-button active" id="startup-button" onclick="toggleMenu()">
+                <i class="fab fa-windows"></i>
               </div>
 
-              <!--   Startup button-->
-              <div class="startup-button active" id="startup-button" onclick="toggleMenu()">
-                <i class="fa fa-windows fa-lg"></i>
+              <!-- Startup Menu-->
+              <div class="startup-menu" id="startup-menu">
+                <i id="fa-bars" class="fa fa-bars fa-lg icons" style="text-transform: uppercase;font-weight: bold"><span class="span">Start</span></i>
+              
+                <div class="startup-menu-icons">
+                  <i class="fa fa-user-circle fa-lg icons"><span class="span">User</span></i>
+                  <i class="fa fa-folder-open fa-lg icons"><span class="span">File Manager</span></i>
+                  <i class="fa fa-cog fa-lg icons"><span class="span">Settings</span></i>
+                  <i class="fa fa-power-off fa-lg icons"><span class="span">Power</span></i>
+                </div>
               </div>
               
               <!-- Search bar -->

@@ -14,7 +14,6 @@ const loadingPage = () => {
       gif.style.display = "d-none";
     }, 1500);
 
-    document.querySelector(".main").classList.remove("d-none");
     document.querySelector(".container-icons").classList.remove("d-none");
     document.querySelector(".taskbar-horizontal").classList.remove("d-none");
 
@@ -22,13 +21,8 @@ const loadingPage = () => {
 
     //Toggle Menu
     const startUpMenu = document.getElementById("startup-menu");
+    console.log(startUpMenu)
     document.getElementById("startup-button").classList.toggle("active");
-
-      if (startUpMenu.style.left === "-400px") {
-        return (startUpMenu.style.left = "0");
-      } else {
-        startUpMenu.style.left = "-400px";
-      }
   
 };
 

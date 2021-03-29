@@ -161,7 +161,13 @@ $tablet-width: 530px;
   position: static;
 }
 
-.fab {
+.fa-address-card {
+  color: $darkblue;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.fa-folder {
   color: $darkblue;
   text-decoration: none;
   font-size: 30px;
@@ -171,7 +177,13 @@ $tablet-width: 530px;
   color: $lightblue;
 }
 
-.fas {
+.fa-linkedin {
+  color: $darkblue;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.fa-github-alt {
   color: $darkblue;
   text-decoration: none;
   font-size: 30px;
