@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> <%= meta_title %> </title>
+    <title><%= meta_title %></title>
     <meta name="description" content="<%= meta_description %>">
 
     <!-- Facebook Open Graph data -->
-    <meta property="og:title" content="<%= meta_title %>" />
+    <meta property="og:title" content="<%= meta_title %>"/>
     <meta property="og:type" content="website" />
     <meta property="og:url" content="<%= request.original_url %>" />
     <meta property="og:image" content="<%= meta_image %>" />
     <meta property="og:description" content="<%= meta_description %>" />
     <meta property="og:site_name" content="<%= meta_title %>" />
 
-    <title>Laure CdP : Coding is underway</title> %>
+    <title>Laure CdP : Coding is underway</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -20,8 +20,6 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', 'data-turbolinks-eval': false, defer: true %>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
     
   </head>
 

@@ -1,16 +1,49 @@
 const loadingPage = () => {
-  const windows = document.querySelector(".container-global");
-  windows.insertAdjacentHTML('afterbegin', "<div class='loading-page'><h2 class= 'btn-greeting'>Enter</h2><div class='spinner icon-spinner' aria-hidden='true'></div></div>");
-  const loadingPage = document.querySelector(".loading-page");
-  const containerIcons = document.querySelector(".container-icons");
-  const navbar = document.querySelector(".navbar");
-  const enterButton = document.querySelector(".btn-greeting");
-  enterButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    loadingPage.classList.add("d-none");
-    containerIcons.classList.remove('d-none');
-    navbar.classList.remove('d-none');
-  })
+
+  function submitPassword() {
+    var loginPage = document.getElementById("login-page");
+    var submit = document.getElementById("submit");
+
+    setTimeout(function () {
+      submit.style.backgroundColor = "green";
+    }, 1100);
+
+    setTimeout(function () {
+      loginPage.style.display = "none";
+    }, 2000);
+  }
+
+  document.addEventListener("keydown", formValidation);
+
+  function formValidation(e) {
+    if (13 == e.keyCode) {
+      var loginPage = document.getElementById("login-page");
+      var homePage = document.getElementById("home-page")
+      var submitBtn = document.getElementById("submit");
+      var submitForm = document.getElementById("input-container");
+
+      setTimeout(function () {
+        submitBtn.style.backgroundColor = "green";
+      }, 1100);
+
+      setTimeout(function () {
+        loginPage.style.display = "none";
+      }, 2000);
+    }
+  }
+
+  //Toggle Menu
+  function toggleMenu() {
+    var startUpMenu = document.getElementById("startup-menu");
+    document.getElementById("startup-button").classList.toggle("active");
+
+    if (startUpMenu.style.left === "-400px") {
+      return (startUpMenu.style.left = "0");
+    } else {
+      startUpMenu.style.left = "-400px";
+    }
+  }
+
 
 };
 

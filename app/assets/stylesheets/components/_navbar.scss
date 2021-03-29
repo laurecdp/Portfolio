@@ -1,12 +1,28 @@
-.navbar-lewagon {
+/* Windows navbar */ 
+
+.navbar {
+  color: $darkblue;
+  font-weight: 600;
+  display: flex;
   justify-content: space-between;
   background: white;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.datetime {
+  color: $darkblue;
+  font-weight: 600;
+  margin-left: 90%;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.datetime p {
+  margin-top: 4%;
+  margin-bottom: 1rem;
+  margin-right: 1em;
+  text-align: center;
+}
+
+.clock {
+  color: $darkblue;
+  font-weight: 600;
+  display: flex;
 }

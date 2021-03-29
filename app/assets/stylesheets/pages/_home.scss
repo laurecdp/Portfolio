@@ -1,83 +1,8 @@
-// Specific CSS for your home-page
+/*General settings */
 
-.container-home {
+.show-container {
 	justify-content: center;
 	text-align: center;
-	padding: 280px 360px;
-	background-image: asset-url('laptop.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: auto;
-	overflow: hidden;
-}
-
-/* Button Enter */
-
-.btn-greeting {
-	opacity: 0.5;
-	margin-bottom: 60px;
-	margin-left: 2em;
-	margin-top: 4em;
-	position: static;
-}
-
-.btn-greeting a {
-	text-decoration: none;
-	text-transform: uppercase;
-	letter-spacing: 4rem;
-	font-size: 2.2rem;
-	font-weight: 400;
-}
-
-.btn-greeting a::backdrop{
-	background-image: asset-url('logo.gif');
-}
-
-/* Spinner */
-
-.icon-spinner:before {
-	content: "\e001";
-}
-
-@keyframes anim-rotate {
-	0% {
-		transform: rotate(0);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
-.spinner {
-	position: relative;
-	font-size:4em;
-	height: 1em;
-	line-height: 1;
-	animation: anim-rotate 1s infinite linear;
-	color: #305d8a;
-	text-shadow: 0 0 .25em rgba(255,255,255, .3);
-}
-.spinner--steps {
-	animation: anim-rotate 1s infinite steps(8);
-}
-.spinner--steps2 {
-	animation: anim-rotate 1s infinite steps(12);
-}
-
-[class^="icon-"], [class*=" icon-"] {
-	font-family: 'icomoon';
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-/*General settings */
-.show-container {
   height: 100vh;
   background-image: asset-url('laptop.png');
   background-size: cover;
@@ -95,39 +20,23 @@
   font-family: 'Syne', sans-serif;
   font-size: 15px;
   line-height: 2px;
-  display: flex;
   text-align: center;
   width: 100%;
   overflow: hidden;
   position: static;
 }
 
-/* Windows navbar */ 
-
-.navbar {
-  color: $darkblue;
-  font-weight: 600;
-  display: flex;
-}
-
-.datetime {
-  color: $darkblue;
-  font-weight: 600;
-  margin-left: 90%;
-}
-
-.datetime p {
-  margin-top: 4%;
-  margin-bottom: 1rem;
-  margin-right: 1em;
+.container-principal {
+  height: 90%;
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  line-height: 2px;
   text-align: center;
+  width: 100%;
+  overflow: hidden;
+  position: static;
 }
 
-.clock {
-  color: $darkblue;
-  font-weight: 600;
-  display: flex;
-}
 
 
 /* Icon Cards */

@@ -1,0 +1,295 @@
+//Fonts
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+
+//Mixins
+@mixin vertical-centering {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//Media Queries
+$mobile-width: 340px;
+$tablet-width: 530px;
+
+@mixin mobile {
+  @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+//Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes descend {
+  from {
+    top: 45%;
+  }
+  to {
+    top: 50%;
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  height: 600px; 
+  .login-page,
+  .home-page {
+    position: relative;
+    width: 100%;
+    height: 600px;
+  }
+  .login-page {
+    font-size: 16px;
+    position: relative;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    .login-page-inner {
+      width: 400px;
+      position: relative;
+      @include vertical-centering;
+      margin: 0 auto;
+      animation: fadeIn 1s ease-in-out, descend 0.5s ease-in-out;
+      #user-icon-container,
+      #username-container,
+      #input-container {
+        text-align: center;
+      }
+      #user-icon-container {
+        margin: 0 auto;
+        width: 140px;
+        height: 140px;
+        font-size: 110%;
+        position: relative;
+        .user-icon-bg {
+          margin: 0 auto;
+          width: 140px;
+          height: 140px;
+          border-radius: 100%;
+          background-image: asset-url('my_profile.jpg');
+          opacity: 0.3;
+          position: relative;
+          z-index: -1;
+        }
+      }
+      #username-container {
+        margin-bottom: 40px;
+        margin-top: 20px;
+        font-family: "Roboto";
+        font-size: 105%;
+        color: white;
+      }
+      #input-container {
+        height: 50px;
+        #password {
+          margin: 0 auto;
+          height: 25px;
+          width: 300px;
+          padding-left: 5px;
+        }
+        #submit {
+          height: 31px;
+          padding: 0 10px;
+          position: relative;
+          right: 5px;
+          background-color: #bdbdbd;
+          border: none;
+          border-radius: 0 2px;
+          cursor: pointer;
+          .fa-arrow-right {
+            line-height: 28px;
+            color: white;
+          }
+          &:hover {
+            background-color: #9e9e9e;
+          }
+        }
+      }
+    }
+  }
+  .home-page {
+    position: absolute;
+    top: 0;
+    margin: 0 auto !important;
+    z-index: 1;
+    .main {
+      height: 556px;
+      width: 100%;
+      position: relative;
+      z-index: 200;
+      .fa, .home-icon {
+        width: 30px;
+        display: block;
+        padding: 13px;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+      }
+      .startup-menu {
+        position: relative;
+        top: -76px; 
+        left: -400px;
+        z-index: 5;
+        height: 400px; //400
+        width: 250px; //250
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        font-size: 12px;
+        font-family: helvetica;
+        overflow: hidden; 
+        transition: left 0.5s;
+        .icons {
+          width: 100%;
+          padding-left: 10px;
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+          }
+        }
+        span {
+          padding-left: 15px;
+        }
+        .startup-menu-icons {
+          display: flex;
+          flex-direction: column;
+          justify-content: strech;
+          align-items: stretch;
+        }
+      }
+    }
+  }
+  .taskbar {
+    height: calc(600px - 556px);
+    //width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .startup-button,
+    .searchbar-container,
+    .date-time-container {
+      height: 42px;
+      line-height: 42px;
+    }
+    .startup-button {
+      width: 50px;
+      min-width: 50px;
+      text-align: center;
+      color: white;
+      cursor: pointer;
+      &:hover {
+        color: #00bcd4;
+      }
+
+    }      
+    .active {
+        color: #00bcd4;
+      }
+    .searchbar-container {
+      width: 300px;
+      margin-right: 20%;
+      #searchbox {
+        height: 38px;
+        width: 100%;
+        padding-left: 2px;
+        font-family: sans-serif;
+        color: black;
+      }
+    }
+    .pinned-apps {
+      width: 350px;
+      height: 42px;
+      .fa {
+        height: 100%;
+        line-height: 42px;
+        padding: 0px 10px;
+        color: white;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+    .data-time-container {
+      height: 40px;
+      width: 105px;
+      padding-left: 20px;
+      font-family: helvetica;
+      display: flex;
+      flex-direction: column;
+      border-left: 1px solid white;
+      text-align: center;
+      #time,
+      #date {
+        height: 20px;
+        line-height: 20px;
+        color: white;
+        font-size: 13px;
+        padding-right: 10px;
+        text-align: right;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .login-page,
+  .home-page {
+    height: 500px !important;
+  }
+  .login-page {
+    width: 100% !important;
+    font-size: 14px !important;
+    .login-page-inner {
+      width: 250px !important;
+      #user-icon-container {
+        width: 120px !important;
+        height: 120px !important;
+        font-size: 100% !important;
+        .user-icon-bg,
+        .fa-user {
+          width: 120px !important;
+          height: 120px !important;
+        }
+        .fa-user-o {
+          top: -100px !important;
+        }
+      }
+    }
+  }
+  #password {
+    width: 200px !important;
+  }
+  #submit {
+    height: 29px !important;
+  }
+  .home-page,
+  .taskbar {
+    width: 100% !important;
+  }
+  .main {
+    height: 460px !important;
+  }
+  .startup-menu {
+    top: -172px !important;
+  }
+  .taskbar {
+    justify-content: space-around !important;
+  }
+  .startup-button {
+    border-right: 1px solid white;
+  }
+  .searchbar-container {
+    display: none !important;
+  }
+}

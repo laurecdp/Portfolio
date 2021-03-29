@@ -1,0 +1,42 @@
+/* Spinner */
+
+.icon-spinner:before {
+	content: "\e001";
+}
+
+@keyframes anim-rotate {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.spinner {
+	position: relative;
+	font-size:4em;
+	height: 1em;
+	line-height: 1;
+	animation: anim-rotate 1s infinite linear;
+	color: #305d8a;
+	text-shadow: 0 0 .25em rgba(255,255,255, .3);
+}
+.spinner--steps {
+	animation: anim-rotate 1s infinite steps(8);
+}
+.spinner--steps2 {
+	animation: anim-rotate 1s infinite steps(12);
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
