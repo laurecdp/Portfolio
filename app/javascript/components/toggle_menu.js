@@ -5,9 +5,8 @@ const toggleMenu = () => {
   const dropupMenu = document.querySelector(".dropdown-menu")
   dropupToggle.addEventListener("click", (event) => {
     event.preventDefault();
-    dropupMenu.classList.toggle("active");
+    dropupMenu.classList.toggle("d-none");
   }) 
-
 
 };
 
