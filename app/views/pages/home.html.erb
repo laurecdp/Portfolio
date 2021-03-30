@@ -21,13 +21,12 @@
         <div class="container-principal">
 
             <div id="windows-gif" class="windows-gif d-none">
-              <%= image_tag "logo.gif", alt: "Logo" %>
+              <%= image_tag "logo.gif", alt: "LCDP FullStack Développeuse" %>
             </div>
 
             <div class="container-icons d-none">
                 <%# Pinned Apps %>
                 <div class="card-icon pinned-apps">
-                    <%# <%= image_tag "logo.png", alt: "Laure Curallucci de Peretti, full-stack developer" %>
                     <div class="card-icon-infos">
                         <div class="icon-card" id="icon-profile">
                             <%= link_to do %>
@@ -60,7 +59,6 @@
             <%# Hidden cards %>
             <div class="container-cards hidden">
                 <div class="card-resume">
-                    <%# <%= image_tag "my_profile.jpg", alt: "Laure Curallucci de Peretti, full-stack developer", class: "img-circle" %>
                     <%= image_tag "web_icons.svg", alt: "Stack Technique" %>
                     <div class="card-resume-info">
                         <h6><strong>Laure Curallucci de Peretti </strong></h6>
@@ -102,36 +100,36 @@
     </div>
 
     <!--  Taskbar at the bottom of the page-->
-        <div class='taskbar taskbar-horizontal d-none'>
+    <div class='taskbar taskbar-horizontal d-none'>
 
-            <!-- Dropup Menu-->
-            <div class="btn-group dropup">
-                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fab fa-windows"></i>
-                </button>
-                <!-- Dropdown menu links -->
-                <ul class="dropdown-menu">
-                    <li><i id="fa-bars" class="fa fa-bars fa-lg icons" style="text-transform: uppercase;font-weight: bold"><span class="span">DEMARRER</span></i></li>
-                    <li><i class="fa fa-user-circle fa-lg icons"><span class="span">Profil</span></i></li>
-                    <li><i class="fa fa-folder-open fa-lg icons"><span class="span">Projets</span></i></li>
-                    <li><i class="fa fa-cog fa-lg icons"><span class="span">Paramètres</span></i></li>
-                    <li><i class="fa fa-power-off fa-lg icons"><span class="span">Marche/Arrêt</span></i></li>
-                </ul>
-            </div>
-              
-              <!-- Search bar -->
-              <div class="searchbar-container">
-                <input type="text" id="searchbox" placeholder="Type here to search">
-              </div>
-
-              <!-- Calendar -->
-              <p><i class="fas fa-sort-up"></i></p>
-
-              <!-- Date and time-->
-              <div class="datetime-container">
-                  <p class="clock"></p>
-                  <p class="calendar"><%=@date = Date.today.strftime("%d/%m/%Y")%></p>
-              </div>
+        <!-- Dropup Menu-->
+        <div class="btn-group dropup">
+            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fab fa-windows"></i>
+            </button>
+            <!-- Dropdown menu links -->
+            <ul class="dropdown-menu">
+                <li><i id="fa-bars" class="fa fa-bars fa-lg icons" style="text-transform: uppercase;font-weight: bold"><span class="span">Démarrer</span></i></li>
+                <li><i class="fa fa-user-circle fa-lg icons"><span class="span">Profil</span></i></li>
+                <li><i class="fa fa-folder-open fa-lg icons"><span class="span">Projets</span></i></li>
+                <li><i class="fa fa-cog fa-lg icons"><span class="span">Paramètres</span></i></li>
+                <li><i class="fa fa-power-off fa-lg icons"><span class="span">Marche/Arrêt</span></i></li>
+            </ul>
         </div>
+            
+            <!-- Search bar -->
+            <%# <div class="searchbar-container">
+            <input type="text" id="searchbox" placeholder="Type here to search">
+            </div> %>
+
+            <!-- Calendar -->
+            <p><i class="fas fa-sort-up"></i></p>
+
+            <!-- Date and time-->
+            <div class="datetime-container">
+                <p class="clock"></p>
+                <p class="calendar"><%=@date = Date.today.strftime("%d/%m/%Y")%></p>
+            </div>
+    </div>
 
 </div>

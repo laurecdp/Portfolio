@@ -3,9 +3,45 @@
 //Fonts
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
 
+//Media Queries
+
+@media screen and (max-width: 640px) {
+  .show-container {
+    width: auto;
+    background-image: asset-url('mobile.svg');
+  }
+  .login-page {
+    width: auto;
+  }
+  .container-global {
+    width: auto;
+  }
+  .taskbar-horizontal {
+    width: auto;
+  }
+}
+
+@media(max-width: 768px) {
+  .container-global {
+    width: 100%;
+  }
+  .taskbar-horizontal {
+    width: 100%;
+  }
+}
+
+@media(max-width: 992px) {
+  .container-global {
+    width: 100%;
+  }
+  .taskbar-horizontal {
+    width: 100%;
+  }
+}
+
 //Mixins
 @mixin vertical-centering {
-  top: 50%;
+  align-items: center;
   transform: translateY(-50%);
 }
 
@@ -25,80 +61,6 @@
   }
   to {
     top: 50%;
-  }
-}
-
-//Media Queries
-$mobile-width: 340px;
-$tablet-width: 530px;
-
-@mixin mobile {
-  @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
-    @content;
-  }
-}
-
-@media(max-width: 992px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media(max-width: 768px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-@include mobile {
-  .login-page,
-  .home-page {
-    height: 500px !important;
-  }
-  .login-page {
-    width: 100% !important;
-    font-size: 14px !important;
-    .login-page-inner {
-      width: 250px !important;
-      #user-icon-container {
-        width: 120px !important;
-        height: 120px !important;
-        font-size: 100% !important;
-        .user-icon-bg,
-        .fa-user {
-          width: 120px !important;
-          height: 120px !important;
-        }
-        .fa-user-o {
-          top: -100px !important;
-        }
-      }
-    }
-  }
-  #password {
-    width: 200px !important;
-  }
-  #submit {
-    height: 29px !important;
-  }
-  .home-page,
-  .taskbar {
-    width: 100% !important;
-  }
-  .main {
-    height: 460px !important;
-  }
-  .startup-menu {
-    top: -172px !important;
-  }
-  .taskbar {
-    justify-content: space-around !important;
-  }
-  .startup-button {
-    border-right: 1px solid white;
-  }
-  .searchbar-container {
-    display: none !important;
   }
 }
 
