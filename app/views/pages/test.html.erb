@@ -98,26 +98,32 @@
             </div>
 
         </div>
+          
+    </div>
 
-        <!--  Taskbar at the bottom of the page-->
-        <div class='taskbar taskbar-horizontal'>
+    <!--  Taskbar at the bottom of the page-->
+        <div class='taskbar taskbar-horizontal d-none'>
 
-              <!-- Startup button-->
-              <div class="startup-button active" id="startup-button" onclick="toggleMenu()">
-                <i class="fab fa-windows"></i>
-              </div>
+            <!-- Dropup Menu-->
+            <div class="btn-group dropup">
+                <button type="button" onclick="toggleMenu()" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fab fa-windows active"></i>
+                </button>
+                <!-- Dropdown menu links -->
+                <ul class="dropdown-menu">
+                    <li><i class="fa fa-user-circle fa-lg icons"><span class="span">User</span></i></li>
+                    <li><i class="fa fa-user-circle fa-lg icons"><span class="span">User</span></i></li>
+                    <li><i class="fa fa-folder-open fa-lg icons"><span class="span">File Manager</span></i></li>
+                    <li><i class="fa fa-cog fa-lg icons"><span class="span">Settings</span></i></li>
+                    <li><i class="fa fa-power-off fa-lg icons"><span class="span">Power</span></i></li>
 
-              <!-- Startup Menu-->
-              <div class="startup-menu" id="startup-menu">
-                <i id="fa-bars" class="fa fa-bars fa-lg icons" style="text-transform: uppercase;font-weight: bold"><span class="span">Start</span></i>
-              
-                <div class="startup-menu-icons">
-                  <i class="fa fa-user-circle fa-lg icons"><span class="span">User</span></i>
-                  <i class="fa fa-folder-open fa-lg icons"><span class="span">File Manager</span></i>
-                  <i class="fa fa-cog fa-lg icons"><span class="span">Settings</span></i>
-                  <i class="fa fa-power-off fa-lg icons"><span class="span">Power</span></i>
-                </div>
-              </div>
+                    <div class="startup-menu" id="startup-menu">
+                        <i id="fa-bars" class="fa fa-bars fa-lg icons" style="text-transform: uppercase;font-weight: bold"><span class="span">Start</span></i>
+                        <div class="startup-menu-icons">  
+                        </div>
+                    </div>
+                </ul>
+            </div>
               
               <!-- Search bar -->
               <div class="searchbar-container">
@@ -133,7 +139,5 @@
                   <p class="calendar"><%=@date = Date.today.strftime("%d/%m/%Y")%></p>
               </div>
         </div>
-          
-      </div>
 
 </div>

@@ -15,6 +15,7 @@ import { toggleButtons } from '../components/toggle_buttons';
 import { initFlatpickr } from "../plugins/flatpickr";
 import { clock } from "../components/clock";
 import { loadingPage} from "../components/loading_page";
+import { toggleMenu} from "../components/toggle_menu";
 
 document.addEventListener('turbolinks:before-cache', () => {
   if (document.querySelector('.container-cards')) {
@@ -33,4 +34,5 @@ document.addEventListener('turbolinks:load', () => {
   toggleButtons();
   initFlatpickr();
   loadingPage();
+  toggleMenu();
 });

@@ -1,5 +1,97 @@
 /*General settings */
 
+//Fonts
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+
+//Mixins
+@mixin vertical-centering {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes descend {
+  from {
+    top: 45%;
+  }
+  to {
+    top: 50%;
+  }
+}
+
+//Media Queries
+$mobile-width: 340px;
+$tablet-width: 530px;
+
+@mixin mobile {
+  @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@include mobile {
+  .login-page,
+  .home-page {
+    height: 500px !important;
+  }
+  .login-page {
+    width: 100% !important;
+    font-size: 14px !important;
+    .login-page-inner {
+      width: 250px !important;
+      #user-icon-container {
+        width: 120px !important;
+        height: 120px !important;
+        font-size: 100% !important;
+        .user-icon-bg,
+        .fa-user {
+          width: 120px !important;
+          height: 120px !important;
+        }
+        .fa-user-o {
+          top: -100px !important;
+        }
+      }
+    }
+  }
+  #password {
+    width: 200px !important;
+  }
+  #submit {
+    height: 29px !important;
+  }
+  .home-page,
+  .taskbar {
+    width: 100% !important;
+  }
+  .main {
+    height: 460px !important;
+  }
+  .startup-menu {
+    top: -172px !important;
+  }
+  .taskbar {
+    justify-content: space-around !important;
+  }
+  .startup-button {
+    border-right: 1px solid white;
+  }
+  .searchbar-container {
+    display: none !important;
+  }
+}
+
+// Main Containers 
+
 .show-container {
 	justify-content: center;
 	text-align: center;
@@ -37,9 +129,31 @@
   position: static;
 }
 
+// Login Page
 
+.login-page {
+  @include vertical-centering;
+}
 
-/* Icon Cards */
+#username-container {
+  margin-top: 20px;
+  font-family: 'Syne', sans-serif;
+  color: $darkblue;
+}
+
+.user-icon-bg {
+  margin: 30% auto 0;
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  background-image: asset-url('my_profile.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Pinned Apps */
 
 .container-icons {
   width: 15%;
@@ -47,7 +161,13 @@
   position: static;
 }
 
-.fab {
+.fa-address-card {
+  color: $darkblue;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.fa-folder {
   color: $darkblue;
   text-decoration: none;
   font-size: 30px;
@@ -57,7 +177,13 @@
   color: $lightblue;
 }
 
-.fas {
+.fa-linkedin {
+  color: $darkblue;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.fa-github-alt {
   color: $darkblue;
   text-decoration: none;
   font-size: 30px;
@@ -93,6 +219,7 @@
 }
 
 /* Profile Part */
+
 .hidden {
   display: none;
 } 
